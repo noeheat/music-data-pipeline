@@ -23,10 +23,10 @@ cursor.execute("DELETE FROM listening_history")
 
 # CSV 데이터를 DB 테이블에 저장
 df.to_sql(
-    "listening_history",
-    conn,
-    if_exists="append",
-    index=False
+    "listening_history",        # 저장할 테이블 이름
+    conn,                       # 연결된 SQLite DB
+    if_exists="append",         # 기존 테이블에 데이터를 추가
+    index=False                 # DataFrame의 인덱스 번호는 저장하지 않음
 )
 
 # 저장 확정
