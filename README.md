@@ -44,6 +44,12 @@
 - 아티스트별, 곡별, 월별, 시간대별, 아티스트별 감상 횟수 및 시간을 분석했다.
 - 분석 결과를 `output/` 폴더에 CSV 파일로 저장했다.
 
+### 5. 파이프라인 통합
+
+- `transform.py`, `load.py`, `analyze.py`를 함수 형태로 정리했다.
+- `pipeline.py`에서 CSV 정리, DB 저장, SQL 분석을 순서대로 실행하도록 구성했다.
+- `python src/pipeline.py` 명령어 하나로 전체 데이터 파이프라인을 실행할 수 있게 했다.
+
 ## 실행 방법
 
 필요한 패키지를 설치한다.
@@ -52,17 +58,8 @@
 pip install -r requirements.txt
 ```
 
-CSV 정리 스크립트를 실행한다.
-
-```bash
-python src/transform.py
-```
-
-실행 후 다음 파일이 생성된다.
-
-```text
-data/processed/cleaned_tracks.csv
-```
+ 전체 파이프라인을 실행한다.
+ python src/pipeline.py
 
 ## 다음 작업
 
