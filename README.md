@@ -62,8 +62,4 @@ pip install -r requirements.txt
  python src/pipeline.py
 
 ## 다음 작업
-
-- `transform.py`, `load.py`, `analyze.py`를 하나의 실행 흐름으로 연결
-- `pipeline.py` 작성
-- README 최종 정리
-- 선택적으로 AWS S3 업로드 기능 추가
+- AWS S3 업로드 기능 추가
